@@ -3,7 +3,7 @@ DeltaSkins is a skin restoring plugin for Bukkit / Spigot / BungeeCord servers. 
 do not get their skins due to them receiving OfflinePlayer UUIDs, but DeltaSkins uses ProtocolLib (on Bukkit / Spigot) and
 BungeeCord connection information to fix this problem.
 
-# Licence (GPLv3)
+# Licence ([GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html))
 ```
 This file is part of DeltaSkins.
 
