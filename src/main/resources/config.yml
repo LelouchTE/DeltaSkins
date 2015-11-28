@@ -1,0 +1,38 @@
+# DeltaSkins Configuration File
+
+# Amount of time between batch UUID requests (milliseconds)
+# Default: 90000 milliseconds = 1.5 minutes
+batch_request_interval: 90000
+
+###############################################################################
+
+# Amount of time a profile can be in cache before needing update
+# Default: 10800000 milliseconds = 3 hours
+cache_expiration: 10800000
+
+# Amount of time to wait before removing a profile from the cache
+# Default: 604800000 milliseconds = 7 days
+cache_discard_older_than: 604800000;
+
+# Amount of time between saving cache to file
+# Spigot: time in ticks     (default: 36000)
+# Bungee: time in seconds   (default: 1800 )
+cache_save_interval: 36000
+
+###############################################################################
+
+# HTTP request connect-timeout value
+# Default: 7000 milliseconds
+connect_timeout: 7000
+
+# HTTP request read-timeout value
+# Default: 7000 milliseconds
+read_timeout: 7000
+
+###############################################################################
+
+# Debug certain classes
+debug_code: False
+
+# Debug HTTP payloads and responses
+debug_mojang_api: False

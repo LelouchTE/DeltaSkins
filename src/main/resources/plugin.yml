@@ -1,0 +1,18 @@
+name: DeltaSkins
+main: com.yahoo.tracebachi.DeltaSkins.Spigot.DeltaSkins
+author: Trace Bachi (tracebachi@yahoo.com, BigBossZee)
+version: 1.4
+depend: [ProtocolLib]
+commands:
+  deltaskins:
+    aliases: [ds]
+    description: 'Administrative command for DeltaSkins.'
+permissions:
+  DeltaSkins.check:
+    description: 'Check if skin data exists in cache.'
+  DeltaSkins.drop:
+    description: 'Remove skin data from cache.'
+  DeltaSkins.set:
+    description: 'Set skin data for someone using skin data in cache.'
+  DeltaSkins.update:
+    description: 'Force an update of skin data in cache.'
