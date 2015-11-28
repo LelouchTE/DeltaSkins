@@ -177,6 +177,12 @@ public class DeltaSkins extends Plugin implements IDeltaSkins, Listener
         }, 5, TimeUnit.SECONDS);
     }
 
+    /***
+     * Source for this method found at:
+     * https://www.spigotmc.org/threads/bungeecords-configuration-api.11214/#post-119017
+     *
+     * Originally authored by: vemacs, Feb 15, 2014
+     */
     public static File loadResource(Plugin plugin, String resource)
     {
         File folder = plugin.getDataFolder();
