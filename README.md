@@ -5,7 +5,8 @@ BungeeCord connection information to fix this problem.
 
 # Licence ([GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html))
 ```
-This file is part of DeltaSkins.
+DeltaSkins - BungeeCord and Bukkit/Spigot plugin for restoring/setting player skins.
+Copyright (C) 2015  Trace Bachi (tracebachi@yahoo.com)
 
 DeltaSkins is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
