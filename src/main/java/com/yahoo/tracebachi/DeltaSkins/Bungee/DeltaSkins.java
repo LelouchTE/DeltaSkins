@@ -61,8 +61,8 @@ public class DeltaSkins extends Plugin implements IDeltaSkins, Listener
         }
         catch(IOException e)
         {
+            getLogger().severe("Failed to load configuration file. Report this error and the following stacktrace.");
             e.printStackTrace();
-            // TODO Log failed to start
             return;
         }
 
