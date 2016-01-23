@@ -16,7 +16,6 @@
  */
 package com.yahoo.tracebachi.DeltaSkins.Bungee.Listeners;
 
-import com.yahoo.tracebachi.DeltaSkins.Bungee.Prefixes;
 import com.yahoo.tracebachi.DeltaSkins.Shared.Interfaces.IDeltaSkins;
 import com.yahoo.tracebachi.DeltaSkins.Shared.MojangApi;
 import com.yahoo.tracebachi.DeltaSkins.Shared.PlayerProfile;
@@ -104,9 +103,6 @@ public class LoginListener implements Listener
             }
 
             plugin.debug("Cached profile for " + name + " expired. Queued to update.");
-
-            plugin.sendDelayedMessage(name, Prefixes.INFO + "Looks like your skin needs to refresh! " +
-                "Relog in a minute to fix it.");
         }
         else
         {

@@ -38,6 +38,4 @@ public interface IDeltaSkins
     void debugApi(String message);
 
     void runAsyncSkinFetch(PlayerProfile profile, String uuidToUse);
-
-    void sendDelayedMessage(String name, String message);
 }

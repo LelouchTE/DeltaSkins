@@ -27,6 +27,8 @@ import com.yahoo.tracebachi.DeltaSkins.Shared.PlayerProfileStorage;
 import com.yahoo.tracebachi.DeltaSkins.Shared.Runnables.BatchUuidRunnable;
 import com.yahoo.tracebachi.DeltaSkins.Shared.Runnables.ProfileFileSaveRunnable;
 import com.yahoo.tracebachi.DeltaSkins.Shared.Runnables.SkinFetchRunnable;
+import net.md_5.bungee.BungeeCord;
+import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Listener;
@@ -158,23 +160,21 @@ public class DeltaSkins extends Plugin implements IDeltaSkins, Listener
     {
         if(profile == null) { return; }
 
-        SkinFetchRunnable runnable = new SkinFetchRunnable(profile, uuidToUse, this);
-        getProxy().getScheduler().runAsync(this, runnable);
-    }
-
-    @Override
-    public void sendDelayedMessage(String name, String message)
-    {
-        if(name == null || message == null) { return; }
-
-        getProxy().getScheduler().schedule(this, () ->
+        getProxy().getScheduler().runAsync(this, () ->
         {
-            ProxiedPlayer player = getProxy().getPlayer(name);
+            String playerName = profile.getName();
+            SkinFetchRunnable runnable = new SkinFetchRunnable(profile, uuidToUse, this);
+            runnable.run();
+
+            ProxiedPlayer player = BungeeCord.getInstance().getPlayer(playerName);
+            BaseComponent[] components = TextComponent.fromLegacyText(
+                Prefixes.INFO + "Your skin has been fetched! Relog to apply it.");
+
             if(player != null)
             {
-                player.sendMessage(TextComponent.fromLegacyText(message));
+                player.sendMessage(components);
             }
-        }, 5, TimeUnit.SECONDS);
+        });
     }
 
     /***

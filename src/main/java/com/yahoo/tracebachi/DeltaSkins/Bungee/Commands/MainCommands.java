@@ -33,7 +33,7 @@ public class MainCommands extends Command
 
     public MainCommands(IDeltaSkins plugin)
     {
-        super("deltaskins");
+        super("deltaskins", null, "ds");
         this.checkCommand = new CheckCommand(plugin.getPlayerProfileStorage());
         this.dropCommand = new DropCommand(plugin);
         this.infoCommand = new InfoCommand(plugin);

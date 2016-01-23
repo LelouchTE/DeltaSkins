@@ -89,9 +89,6 @@ public class LoginListener implements Listener
             }
 
             plugin.debug("Cached profile for " + name + " expired. Queued to update.");
-
-            plugin.sendDelayedMessage(name, Prefixes.INFO + "Looks like your skin needs to refresh! " +
-                "Relog in a minute to fix it.");
         }
         else
         {

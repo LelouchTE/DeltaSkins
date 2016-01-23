@@ -54,7 +54,6 @@ public class DeltaSkins extends JavaPlugin implements IDeltaSkins, Listener
     @Override
     public void onLoad()
     {
-        getDataFolder().mkdirs();
         saveDefaultConfig();
     }
 
@@ -163,22 +162,20 @@ public class DeltaSkins extends JavaPlugin implements IDeltaSkins, Listener
     {
         if(profile == null) { return; }
 
-        SkinFetchRunnable runnable = new SkinFetchRunnable(profile, uuidToUse, this);
-        getServer().getScheduler().runTaskAsynchronously(this, runnable);
-    }
-
-    @Override
-    public void sendDelayedMessage(String name, String message)
-    {
-        if(name == null || message == null) { return; }
-
-        getServer().getScheduler().runTaskLater(this, () ->
+        getServer().getScheduler().runTaskAsynchronously(this, () ->
         {
-            Player player = Bukkit.getPlayer(name);
-            if(player != null)
+            String playerName = profile.getName();
+            SkinFetchRunnable runnable = new SkinFetchRunnable(profile, uuidToUse, this);
+            runnable.run();
+
+            Bukkit.getScheduler().runTask(this, () ->
             {
-                player.sendMessage(message);
-            }
-        }, 5);
+                Player player = Bukkit.getPlayer(playerName);
+                if(player != null)
+                {
+                    player.sendMessage(Prefixes.INFO + "Your skin has been fetched! Relog to apply it.");
+                }
+            });
+        });
     }
 }

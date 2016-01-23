@@ -5,7 +5,6 @@ version: 1.4
 depend: [ProtocolLib]
 commands:
   deltaskins:
-    aliases: [ds]
     description: 'Administrative command for DeltaSkins.'
 permissions:
   DeltaSkins.check:
