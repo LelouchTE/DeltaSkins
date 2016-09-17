@@ -1,8 +1,7 @@
 name: DeltaSkins
-main: com.yahoo.tracebachi.DeltaSkins.Bungee.DeltaSkins
-author: Trace Bachi (tracebachi@yahoo.com, BigBossZee)
-version: 1.4
-depend: [ProtocolLib]
+main: com.gmail.tracebachi.DeltaSkins.Bungee.DeltaSkins
+author: Trace Bachi (tracebachi@gmail.com, BigBossZee)
+version: ${project.version}
 commands:
   deltaskins:
     description: 'Administrative command for DeltaSkins.'

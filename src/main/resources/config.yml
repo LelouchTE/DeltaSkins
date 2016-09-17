@@ -1,38 +1,42 @@
+###############################################################################
 # DeltaSkins Configuration File
+###############################################################################
 
 # Amount of time between batch UUID requests (milliseconds)
-# Default: 90000 milliseconds = 1.5 minutes
-batch_request_interval: 90000
+# Default: 90 seconds
+BatchRequestIntervalSeconds: 90
 
-###############################################################################
+# Amount of time a skin can be in cache before needing an update
+# Default: 180 minutes
+SkinCacheDurationMinutes: 180
 
-# Amount of time a profile can be in cache before needing update
-# Default: 10800000 milliseconds = 3 hours
-cache_expiration: 10800000
-
-# Amount of time to wait before removing a profile from the cache
-# Default: 604800000 milliseconds = 7 days
-cache_discard_older_than: 604800000;
-
-# Amount of time between saving cache to file
+# Amount of time between saving Profiles.json and SkinData.json
 # Spigot: time in ticks     (default: 36000)
 # Bungee: time in seconds   (default: 1800 )
-cache_save_interval: 36000
+FileSaveInterval: 36000
 
-###############################################################################
+# Formats for various ingame messages
+# If a format in not added here, certain actions will display "Unspecified Format".
+# To fix that, add that format to this configuration.
+Formats:
 
-# HTTP request connect-timeout value
-# Default: 7000 milliseconds
-connect_timeout: 7000
+  NoPermission: '&8[&c!&8] &cFailure &8[&c!&8]&7 You do not have the &f{0}&7 permission."'
+  CommandHelp: '&8[&9!&8] &9Help &8[&9!&8]&7 &f{0}&7'
 
-# HTTP request read-timeout value
-# Default: 7000 milliseconds
-read_timeout: 7000
+  PlayerProfileNotFound: '&8[&c!&8] &cFailure &8[&c!&8]&7 PlayerProfile not found for &f{0}&7.'
+  PlayerProfileCheck: '&8[&a!&8] &aSuccess &8[&a!&8]&7 PlayerProfile for &f{0}&7 found? &f{1}&7.'
+  PlayerProfileDropped: '&8[&a!&8] &aSuccess &8[&a!&8]&7 PlayerProfile for &f{0}&7 dropped.'
+  PlayerProfileInfo: '&8[&9!&8] &9Info &8[&9!&8]&7 &f{0}&7 PlayerProfiles found in cache. &f{1}&7 pending UUID requests.'
 
-###############################################################################
+  PlayerProfileResetToOwn: "&8[&a!&8] &aSuccess &8[&a!&8]&7 PlayerProfile reset to &f{0}&7''s own"
+  PlayerProfileResetRemoved: '&8[&a!&8] &aSuccess &8[&a!&8]&7 PlayerProfile for &f{0}&7 was removed because it was not premium.'
 
-# Debug certain classes
-debug_code: False
+  UseResetInsteadOfSet: '&8[&c!&8] &cFailure &8[&c!&8]&7 Use /ds reset for the original skin.'
+  PlayerProfileNotFoundForSet: '&8[&c!&8] &cFailure &8[&c!&8]&7 PlayerProfile not found for &f{0}&7. Try again when /ds info &f{0}&7 says there is a profile.'
+  PlayerProfileUpdated: '&8[&a!&8] &aSuccess &8[&a!&8]&7 Updated PlayerProfile of &f{0}&7 from &f{1}&7.'
 
-# Debug HTTP payloads and responses
-debug_mojang_api: False
+# Debug Level
+# 0 = Off
+# 1 = Non Mojang API debugging only
+# 2 = Non Mojang API + Mojang API debugging
+DebugLevel: 1
