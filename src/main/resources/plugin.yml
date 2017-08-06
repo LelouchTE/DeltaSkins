@@ -1,6 +1,6 @@
 name: DeltaSkins
 main: com.gmail.tracebachi.DeltaSkins.Spigot.DeltaSkins
-author: Trace Bachi (tracebachi@gmail.com, BigBossZee)
+author: GeeItsZee (tracebachi@gmail.com)
 version: ${project.version}
 commands:
   deltaskins:

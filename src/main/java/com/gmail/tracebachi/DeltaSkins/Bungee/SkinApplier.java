@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/16/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class SkinApplier
 {
@@ -51,7 +51,8 @@ public class SkinApplier
 
         InitialHandler handler = (InitialHandler) player.getPendingConnection();
         String uuidString = player.getUniqueId().toString();
-        LoginResult newLoginResult = addTextureProperty(handler, uuidString, skinData);
+        String playerName = player.getName();
+        LoginResult newLoginResult = addTextureProperty(handler, playerName, uuidString, skinData);
 
         try
         {
@@ -67,7 +68,7 @@ public class SkinApplier
         }
     }
 
-    private LoginResult addTextureProperty(InitialHandler handler, String uuid, SkinData skinData)
+    private LoginResult addTextureProperty(InitialHandler handler, String playerName, String uuid, SkinData skinData)
     {
         LoginResult.Property textureProperty = new LoginResult.Property(
             TEXTURES_PROPERTY_NAME,
@@ -78,7 +79,8 @@ public class SkinApplier
             handler.getLoginProfile() == null ||
             handler.getLoginProfile().getProperties() == null)
         {
-            return new LoginResult(uuid, new LoginResult.Property[] { textureProperty });
+
+            return new LoginResult(uuid, playerName, new LoginResult.Property[] { textureProperty });
         }
 
         LoginResult.Property[] oldProperties = handler.getLoginProfile().getProperties();
@@ -88,7 +90,7 @@ public class SkinApplier
             if(oldProperties[i].getName().equals(TEXTURES_PROPERTY_NAME))
             {
                 oldProperties[i] = textureProperty;
-                return new LoginResult(uuid, oldProperties);
+                return new LoginResult(uuid, playerName, oldProperties);
             }
         }
 
@@ -96,7 +98,7 @@ public class SkinApplier
 
         System.arraycopy(oldProperties, 0, newProperties, 0, oldProperties.length);
         newProperties[oldProperties.length] = textureProperty;
-        return new LoginResult(uuid, newProperties);
+        return new LoginResult(uuid, playerName, newProperties);
     }
 
     private static Field getLoginProfileField()

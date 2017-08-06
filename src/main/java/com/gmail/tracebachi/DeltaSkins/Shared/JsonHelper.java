@@ -6,7 +6,7 @@ import com.google.gson.JsonParser;
 import java.io.*;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/16/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public interface JsonHelper
 {

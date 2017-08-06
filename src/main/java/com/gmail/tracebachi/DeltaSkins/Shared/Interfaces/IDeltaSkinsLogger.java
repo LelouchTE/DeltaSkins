@@ -1,7 +1,7 @@
 package com.gmail.tracebachi.DeltaSkins.Shared.Interfaces;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/16/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public interface IDeltaSkinsLogger
 {

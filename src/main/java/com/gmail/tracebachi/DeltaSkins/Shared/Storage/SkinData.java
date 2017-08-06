@@ -22,7 +22,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 10/29/15.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class SkinData implements JsonSerializable
 {

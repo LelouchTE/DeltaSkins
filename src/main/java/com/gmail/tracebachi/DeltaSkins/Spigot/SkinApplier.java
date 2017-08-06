@@ -33,7 +33,7 @@ import java.util.Collections;
 import static net.minecraft.server.v1_10_R1.PacketPlayOutEntity.*;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/16/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class SkinApplier
 {

@@ -34,7 +34,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/10/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class MojangApi implements AutoCloseable
 {

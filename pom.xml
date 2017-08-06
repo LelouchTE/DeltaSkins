@@ -6,16 +6,12 @@
 
     <groupId>com.yahoo.tracebachi</groupId>
     <artifactId>DeltaSkins</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 
     <repositories>
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>bungeecord-repo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
         <repository>
             <id>dmulloy2-repo</id>
@@ -27,14 +23,14 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <version>1.10.2</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-jar</artifactId>
-            <version>1.10</version>
+            <artifactId>BungeeCord</artifactId>
+            <version>1253</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
@@ -47,7 +43,8 @@
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
-            <version>3.6.4</version>
+            <version>4.3.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -70,20 +67,8 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <archive>
-                        <manifestEntries>
-                            <Built-By>Trace Bachi</Built-By>
-                        </manifestEntries>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.2</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -91,25 +76,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <artifactSet>
-                                <excludes>
-                                    <exclude>org.spigotmc:*</exclude>
-                                    <exclude>net.md-5:*</exclude>
-                                    <exclude>com.comphenix.protocol:*</exclude>
-                                    <exclude>com.googlecode:*</exclude>
-                                    <exclude>com.googlecode.json-simple:*</exclude>
-                                    <exclude>junit:*</exclude>
-                                    <exclude>org.hamcrest:*</exclude>
-                                    <exclude>com.google.guava:*</exclude>
-                                    <exclude>com.google.code.gson:*</exclude>
-                                    <exclude>org.avaje:*</exclude>
-                                    <exclude>javax.persistence:*</exclude>
-                                    <exclude>org.yaml:*</exclude>
-                                    <exclude>net.md-5:*</exclude>
-                                    <exclude>cglib:*</exclude>
-                                    <exclude>com.comphenix.executors:*</exclude>
-                                </excludes>
-                            </artifactSet>
+                            <minimizeJar>true</minimizeJar>
                         </configuration>
                     </execution>
                 </executions>

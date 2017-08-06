@@ -11,7 +11,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/17/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class BungeeListener implements PluginMessageListener
 {

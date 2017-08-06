@@ -31,7 +31,7 @@ import net.md_5.bungee.event.EventHandler;
 import net.md_5.bungee.event.EventPriority;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/10/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class LoginListener implements Listener
 {

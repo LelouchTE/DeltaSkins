@@ -21,7 +21,7 @@ import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/10/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class PlayerProfile implements JsonSerializable
 {

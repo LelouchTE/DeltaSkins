@@ -24,7 +24,7 @@ import com.google.gson.JsonElement;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/10/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class PlayerProfileStorage implements JsonSerializable
 {

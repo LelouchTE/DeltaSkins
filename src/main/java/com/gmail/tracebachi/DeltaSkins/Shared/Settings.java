@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Trace Bachi (tracebachi@gmail.com, BigBossZee) on 9/17/16.
+ * GeeItsZee (tracebachi@gmail.com)
  */
 public class Settings
 {
