@@ -19,18 +19,18 @@ package com.gmail.tracebachi.DeltaSkins.Spigot;
 import com.gmail.tracebachi.DeltaSkins.Shared.Storage.SkinData;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import net.minecraft.server.v1_10_R1.*;
+import net.minecraft.server.v1_12_R1.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_10_R1.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_10_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Collections;
 
-import static net.minecraft.server.v1_10_R1.PacketPlayOutEntity.*;
+import static net.minecraft.server.v1_12_R1.PacketPlayOutEntity.*;
 
 /**
  * GeeItsZee (tracebachi@gmail.com)
